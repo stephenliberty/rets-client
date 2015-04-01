@@ -4,11 +4,12 @@
   "description": "A RETS client (Real Estate Transaction Standard).",
   "main": "index.js",
   "dependencies": {
+    "formidable": "~1.0.15",
+    "lodash": "^3.6.0",
     "request": "~2.39.0",
     "stream-buffers": "~0.2.5",
     "winston": "~0.7.3",
-    "xml2js": "~0.4.4",
-    "formidable": "~1.0.15"
+    "xml2js": "~0.4.4"
   },
   "devDependencies": {
     "winston": "~0.7.3",
@@ -28,14 +29,15 @@
     "integration-test": "grunt integration"
   },
   "directories": {
-    "lib":"./lib"
+    "lib": "./lib"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/sbruno81/rets-client.git"
   },
   "keywords": [
-    "rets", "Real Estate Transaction Standard"
+    "rets",
+    "Real Estate Transaction Standard"
   ],
   "author": "Steve Bruno <stevenrbruno@icloud.com>",
   "license": "The MIT License (MIT)",

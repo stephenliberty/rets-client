@@ -6,7 +6,8 @@ var logger = require('winston'),
     auth = require('./lib/auth.js'),
     metadata = require('./lib/metadata.js'),
     search = require('./lib/search.js'),
-    object = require('./lib/object.js');
+    object = require('./lib/object.js'),
+    common = require('./lib/common.js');
 
 var KEY_MEMBER_NAME = "MemberName";
 var KEY_USER = "User";
@@ -101,6 +102,14 @@ Client.prototype.configure = function(systemData) {
     self.searchModule = search(self.systemData[KEY_SEARCH]);
     //object module
     self.objectModule = object(self.systemData[KEY_GET_OBJECT]);
+};
+
+Client.prototype.setDefaultHeaders = function (headers) {
+    common.headers = headers;
+};
+
+Client.prototype.setDefaultQueryParams = function (params) {
+    common.queryParams = params;
 };
 
 /**
